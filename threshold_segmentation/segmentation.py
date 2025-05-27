@@ -29,7 +29,7 @@ masks_1 = {}
 
 # Apply thresholds in image_1
 for name, thres in thresholds.items():
-    mask = apply_threshold(img_data_1, thres[0], thres[1])
+    mask = apply_threshold(img_data_1, lower_thres=thres[0], upper_thres=thres[1])
     masks_1[name] = mask
 
 # Save Masks
@@ -43,7 +43,7 @@ masks_2 = {}
 
 # Apply thresholds in image_2
 for name, thres in thresholds.items():
-    mask = apply_threshold(img_data_2, thres[0], thres[1])
+    mask = apply_threshold(img_data_2, lower_thres=thres[0], upper_thres=thres[1])
     masks_2[name] = mask
 
 # Save Masks
